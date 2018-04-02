@@ -16,7 +16,7 @@ $(document).ready(function(){
                 } else {
                     count++;
                 }
-            }, 500);
+            }, 400);
         };
     });
 });
