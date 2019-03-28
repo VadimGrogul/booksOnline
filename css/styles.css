@@ -382,6 +382,7 @@ ul {
       padding: 0 0 7px 17px; }
     .main .aside .toggle-categories {
       display: block;
+      font-size: 14px;
       padding: 5px 20px;
       background: -webkit-gradient(linear, left bottom, left top, from(#52a452), to(#92d774));
       background: -webkit-linear-gradient(bottom, #52a452, #92d774);
@@ -402,17 +403,18 @@ ul {
       .main .aside .categories-container ul.genres li {
         border-bottom: 1px solid #e6e7e8;
         padding: 5px 0; }
-        .main .aside .categories-container ul.genres li a {
+        .main .aside .categories-container ul.genres li p {
           display: block;
           font-size: 15px;
           color: #6b6969;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
-          .main .aside .categories-container ul.genres li a:hover {
+          .main .aside .categories-container ul.genres li p:hover {
             -webkit-transform: scale(1.1);
                 -ms-transform: scale(1.1);
                     transform: scale(1.1);
+                    cursor: pointer;
             text-shadow: 1px 1px 1px #ccc; }
     .main .aside .show-hide-genres {
       position: absolute;
@@ -501,6 +503,8 @@ ul {
         text-align: center;
         max-width: 130px;
         width: 130px;
+        animation-duration: 0.4s;
+        animation-name: showBooks;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -517,7 +521,8 @@ ul {
         margin-bottom: 25px;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
-        transition: 0.3s; }
+        transition: 0.3s; 
+      }
         .main .books-wrapper .books-content .book:hover .book-cover {
           -webkit-box-shadow: 0 0 10px 3px #ccc;
                   box-shadow: 0 0 10px 3px #ccc;
@@ -664,14 +669,8 @@ ul {
 
 @keyframes showBooks {
   0% {
-    margin-top: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
+    opacity: 0 }
   50% {
-    margin-top: -15px;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+    opacity: 0.5 }
   100% {
-    margin-top: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    opacity: 1 } }
