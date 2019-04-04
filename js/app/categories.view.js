@@ -74,6 +74,8 @@ class CategoriesView {
     listenByBook(cb) {
         this.selectors.booksContainer.on('click', this.selectors.byBookBtn, function() {
             let bookId = $(this).parent().attr('data-id');
+
+            $(this).css('background', 'lightblue');
             cb(bookId);
         })
     }
