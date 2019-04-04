@@ -433,7 +433,7 @@ ul {
       color: #61c261;
       line-height: 36px;
       font-size: 1.5em;
-      z-index: 9;
+      z-index: 3;
       display: none; }
   .main .main-content {
     max-width: -webkit-calc(100% - 200px);
@@ -478,7 +478,7 @@ ul {
         font-weight: bold;
         background: #fff;
         border-bottom: #fff;
-        z-index: 3; }
+        z-index: 1; }
   .main .books-wrapper {
     border: 1px solid #ccc;
     position: relative;

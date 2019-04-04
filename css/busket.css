@@ -1,0 +1,234 @@
+.body-curtain {
+    position: relative;
+}
+
+.body-curtain:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+button {
+    outline: none;
+}
+
+.by {
+    border-radius: 3px;
+    font-weight: bold;
+    background: linear-gradient(to top, #52a452, #61c261);
+    transition: 0.3s;
+    border: none;
+    color: #fff;
+}
+
+.by:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.busket {
+    position: fixed;
+    top: 100px;
+    left: calc(50% - 400px);
+    width: 800px;
+    max-height: 70%;
+    background: #fff;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    z-index: -1;
+    opacity: 0;
+    overflow: scroll;
+    border-radius: 3px;
+}
+
+.busket__show {
+    z-index: 3;
+    opacity: 1;
+}
+
+.busket h1 {
+    padding: 10px;
+    background: #79b260;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.busket__container {
+    padding: 20px;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+.busket__count {
+    color: red;
+}
+
+.total-price {
+    color: #1893ed;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.busket-mini {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid lightgreen;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.animBusket {
+    animation: addInBusket 1s;
+}
+
+.busket-mini:hover {
+    box-shadow: 0 0 17px 4px green;
+    cursor: pointer;
+}
+
+.busket-mini__count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgb(230, 60, 60);
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.busket-mini .fa {
+    color: green;
+    font-size: 30px;
+}
+
+.busket-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    padding: 3px 7px;
+    box-shadow: inset 2px 2px 3px -1px #aaa;
+    border: 1px solid #000;
+    background: linear-gradient(to top, #000, #414141);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.busket-close-btn:hover {
+    transform: scale(1.1);
+}
+
+.confirm-order {
+    float: right;
+    text-transform: uppercase;
+}
+
+.confirm-order:after {
+    content: '';
+    clear: both;
+}
+
+.busket__book-remove {
+    padding: 1px 5px;
+    background: linear-gradient(to top, #ccc, transparent);
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.busket__book-remove:hover {
+    box-shadow: 0 0 1px 1px red;
+}
+
+.confirm-order {
+    background: linear-gradient(to top, #52a452, #61c261);
+    padding: 1px 10px;
+    border-radius: 3px;
+    border: 1px solid green;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.confirm-order:hover {
+    transform: scale(1.1);
+}
+
+.busket-table {
+    margin-bottom: 50px;
+}
+
+@keyframes addInBusket {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .busket {
+        width: 430px;
+        font-size: 10px;
+        left: calc(50% - 215px);
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .busket {
+        width: 90%;
+        font-size: 8px;
+        top: 50px;
+        left: 5%;
+        z-index: 5;
+    }
+
+    .busket h1 {
+        font-size: 22px;
+    }
+    
+    .total-price {
+        font-size: 10px;
+    }
+
+    .busket-mini {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .busket-mini__count {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+}
+
+

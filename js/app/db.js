@@ -1,9 +1,9 @@
-class CategoriesModel {
+class Data {
     constructor() {
-        this._data = [
+        this.data = [
             {
                 name: 'The Hare With Amber Eyes',
-                price: '40',
+                price: '$40',
                 src: './img/1.jpg',
                 isSale: true,
                 sale: 30,
@@ -12,7 +12,7 @@ class CategoriesModel {
             },
             {
                 name: 'Name Namevich',
-                price: '50',
+                price: '$50',
                 src: './img/2.jpg',
                 isSale: false,
                 sale: 0,
@@ -21,7 +21,7 @@ class CategoriesModel {
             },
             {
                 name: 'Can love Happen Twice',
-                price: '49',
+                price: '$49',
                 src: './img/3.jpg',
                 isSale: true,
                 sale: 30,
@@ -30,7 +30,7 @@ class CategoriesModel {
             },
             {
                 name: 'The immortals of Meluha',
-                price: '150',
+                price: '$150',
                 src: './img/4.jpg',
                 isSale: false,
                 sale: 0,
@@ -39,7 +39,7 @@ class CategoriesModel {
             },
             {
                 name: 'Lifeis What You Make It',
-                price: '65',
+                price: '$65',
                 src: './img/5.jpg',
                 isSale: false,
                 sale: 0,
@@ -48,7 +48,7 @@ class CategoriesModel {
             },
             {
                 name: 'Marathon BABA',
-                price: '50',
+                price: '$50',
                 src: './img/6.jpg',
                 isSale: false,
                 sale: 0,
@@ -57,7 +57,7 @@ class CategoriesModel {
             },
             {
                 name: 'Grisham',
-                price: '150',
+                price: '$150',
                 src: './img/7.jpg',
                 isSale: false,
                 sale: 0,
@@ -66,7 +66,7 @@ class CategoriesModel {
             },
             {
                 name: 'The long Dark Tea Time Of The Soul',
-                price: '59',
+                price: '$59',
                 src: './img/8.jpg',
                 isSale: true,
                 sale: 30,
@@ -75,7 +75,7 @@ class CategoriesModel {
             },
             {
                 name: 'The Armaggeddon RAG',
-                price: '50',
+                price: '$50',
                 src: './img/9.jpg',
                 isSale: false,
                 sale: 0,
@@ -84,7 +84,7 @@ class CategoriesModel {
             },
             {
                 name: 'A Walk Across the Sun',
-                price: '70',
+                price: '$70',
                 src: './img/10.jpg',
                 isSale: false,
                 sale: 0,
@@ -93,7 +93,7 @@ class CategoriesModel {
             },
             {
                 name: 'The Sins of The Futher',
-                price: '30',
+                price: '$30',
                 src: './img/11.jpg',
                 isSale: false,
                 sale: 0,
@@ -102,7 +102,7 @@ class CategoriesModel {
             },
             {
                 name: 'The Magic',
-                price: '150',
+                price: '$150',
                 src: './img/12.jpg',
                 isSale: false,
                 sale: 0,
@@ -111,7 +111,7 @@ class CategoriesModel {
             },
             {
                 name: 'Crossroads',
-                price: '50',
+                price: '$50',
                 src: './img/13.jpg',
                 isSale: false,
                 sale: 0,
@@ -120,7 +120,7 @@ class CategoriesModel {
             },
             {
                 name: 'Grisham',
-                price: '5',
+                price: '$5',
                 src: './img/14.jpg',
                 isSale: true,
                 sale: 30,
@@ -129,44 +129,13 @@ class CategoriesModel {
             },
             {
                 name: 'I Never it was You',
-                price: '150',
+                price: '$150',
                 src: './img/15.jpg',
                 isSale: false,
                 sale: 0,
                 genre: 'Mystery',
                 id: 14
             }
-        ],
-
-        this.busketData = []
-    }
-
-    //methods
-    getBooks(cb) {
-        cb(this._data);
-    }
-
-    changeCategory(genre, cb) {
-        if(genre == 'All') {
-            cb(this._data);
-        } else {
-            let newData = this._data.filter(el => el.genre === genre);
-            cb(newData)
-        }
-        
-    }
-
-    getBookForBusket(bookId, cb) {
-        let book = this._data.find(b => b.id == bookId);
-        this.busketData.push(book);
-        cb(this.busketData);
-        console.log(this.busketData)
-
-    }
-
-    removeFromBusket(bookId, cb) {
-        this.busketData.splice(find(book => book.id == bookId), 1);
-        cb(this.busketData);
-        console.log(this.busketData)
+        ]
     }
 }

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>booksOnline</title>
     <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/busket.css">
     <link rel="stylesheet" href="css/media.css">
 
 </head>
@@ -108,6 +110,30 @@
         </div>
     </main>
 
+    <div class="busket-mini"><i class="fa fa-shopping-bag"></i> <div class="busket-mini__count">0</div></div>
+
+    <div class="busket">
+        <button class="busket-close-btn">Close</button>
+        <h1 class="busket__header">Your purchases</h1>
+        <div class="busket__container">
+            <table class="table busket-table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="busket__books">
+                    <!-- Rendering rows from js -->
+                </tbody>
+            </table>
+            <span class="total-price">Total Price: $<span class="total-price__num"></span></span>
+            <button class="confirm-order">Confirm Order!</button>
+        </div>
+    </div>
+
     <div class="footer-genres-wrapper">
         <div class="footer-genres">
             <div class="genre-row">
@@ -180,6 +206,7 @@
         </div>
     </div>
 
+
     <footer class="footer">
         <div class="footer-container">
             <h3 class="internet-banking">We accept all major Credit Card/Debit Card/Internet Banking</h3>
@@ -202,6 +229,7 @@
     <script type="text/javascript" src="js/page-links.js"></script>
     <script type="text/javascript" src="js/show-hide-genres.js"></script>
     <script type="text/javascript" src="js/footerAnimation.js"></script>
+    <script type="text/javascript" src="js/app/db.js"></script>
     <script type="text/javascript" src="js/app/categories.model.js"></script>
     <script type="text/javascript" src="js/app/categories.view.js"></script>
     <script type="text/javascript" src="js/app/categories.controller.js"></script>
