@@ -36,7 +36,7 @@ class CategoriesView {
 
             busketItem: function(book, length) {
                 return `
-                        <tr>
+                        <tr data-id="${book.id}">
                             <th scope="row">${length}</th>
                             <td>${book.name}</td>
                             <td>$${book.price}</td>
@@ -108,7 +108,8 @@ class CategoriesView {
 
     removeBusketBook(cb) {
         this.selectors.busketBookContainer.on('click', this.selectors.busketRemoveBtn, function() {
-            let id = $(this).parent().attr('data-id');
+            let id = +$(this).parents('tr').attr('data-id');
+            console.log(id);
             cb(id)
         })
     }

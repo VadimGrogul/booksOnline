@@ -165,7 +165,13 @@ class CategoriesModel {
     }
 
     removeFromBusket(bookId, cb) {
-        this.busketData.splice(find(book => book.id == bookId), 1);
+        for(let i = 0; i < this.busketData.length; i++) {
+            if(this.busketData[i].id === bookId) {
+                delete(this.busketData[i]);
+                this.busketData.splice(i, 1);
+            }
+        }
+        console.log(bookId);
         cb(this.busketData);
         console.log(this.busketData)
     }
