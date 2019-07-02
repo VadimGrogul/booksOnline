@@ -96,14 +96,12 @@ class CategoriesView {
 
         this.selectors.busketCount.text(data.length);
         this.selectors.totalPrice.text(price);
-        // this.selectors.busketMini.addClass('animBusket');
-        // this.selectors.busketMini.delay(2000).removeClass('animBusket');
         
-  
         
-        this.selectors.busketMini.css('animation', 'addInBusket 1s running');
-
-        this.selectors.busketMini.delay(2000).removeAttr('style');
+        this.selectors.busketMini.addClass('animBusket');
+        setTimeout(() => {
+            this.selectors.busketMini.removeClass('animBusket');
+        } ,1000)
     }
 
     removeBusketBook(cb) {
